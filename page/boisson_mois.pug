@@ -1,0 +1,15 @@
+doctype html
+html 
+    head
+        title tp noté
+        link(rel = "stylesheet", href="style.css")
+        link(rel = "stylesheet", href="https://lemonssquirrel.github.io/css/normalize.css")
+        link(rel = "stylesheet", href="https://lemonssquirrel.github.io/css/skeleton.css")
+    body
+        include navbar.pug
+        br
+        br
+        div.relative.flex.flex-column.items-center
+            img(src=`${beer.image_url}`).fit.images
+            h1 #{beer.name}
+            p #{beer.description}

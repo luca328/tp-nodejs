@@ -1,0 +1,22 @@
+doctype html
+html 
+    head
+        title tp noté
+        script(defer, src="https://cdn.socket.io/4.5.4/socket.io.min.js")
+        script(src= "script.js", defer)
+        link(rel = "stylesheet", href="style.css")
+        link(rel = "stylesheet", href="https://lemonssquirrel.github.io/css/normalize.css")
+        link(rel = "stylesheet", href="https://lemonssquirrel.github.io/css/skeleton.css")
+    body
+        include navbar.pug
+        div.flex.flex-center
+            h1 Contact
+        br
+        br
+        .flex.justify-center
+            form#form(action="")
+                .flex.flex-column
+                    textarea(readonly).horizontal-left#messages
+                    .flex.flex-row
+                        input#input(type="text", autocomplete = "off", placeholder = "posez une question")
+                        button envoyer
